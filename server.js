@@ -8,7 +8,7 @@ const userRouter = require('./users/userRouter');
 const logger = require('morgan')
 
 server.get('/', (req, res) => {
-  res.send(`<h2>Let's write some middleware!</h2>`);
+  res.status(200).json({ environment: process.env.NODE_ENV, port: process.env.PORT })
 });
 
 
